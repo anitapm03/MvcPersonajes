@@ -51,5 +51,11 @@ namespace MvcPersonajes.Controllers
                 personaje.Nombre, personaje.Imagen);
             return RedirectToAction("Index");
         }
+
+        public IActionResult Detalle(int idpersonaje)
+        {
+            Personaje personaje = this.repo.FindPersonaje(idpersonaje);
+            return View(personaje);
+        }
     }
 }
