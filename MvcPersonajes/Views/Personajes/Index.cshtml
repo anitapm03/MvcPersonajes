@@ -1,0 +1,53 @@
+﻿@model List<Personaje>
+
+<h1>
+    Lista de personajes
+</h1>
+
+<p>
+    <a asp-controller="Personajes" asp-action="Crear">
+        Crear un personaje
+    </a>
+</p>
+
+@if (Model != null)
+{
+    <table class="table table-hover">
+        <thead>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Foto</th>
+        <th></th>
+        </thead>
+        <tbody>
+            @foreach (Personaje p in Model)
+            {
+                <tr>
+                    <td>@p.IdPersonaje</td>
+                    <td>@p.Nombre</td>
+                    <td>
+                        <img src="@p.Imagen"
+                             style="width:150px;height:150px" />
+                    </td>
+                    <td>
+                        <a asp-asp-controller="Personajes"
+                            asp-action="Eliminar" 
+                            asp-route-idpersonaje="@p.IdPersonaje"
+                            class="btn btn-dark">
+                            Eliminar
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-asp-controller="Personajes"
+                           asp-action="Modificar"
+                           asp-route-idpersonaje="@p.IdPersonaje"
+                           class="btn btn-dark">
+                            Modificar
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

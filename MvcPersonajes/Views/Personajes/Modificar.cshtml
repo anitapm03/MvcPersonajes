@@ -1,0 +1,26 @@
+﻿@model Personaje
+
+<h1>Modificar Personaje</h1>
+
+<p>
+    <a asp-controller="Personajes" asp-action="Index">
+        Volver
+    </a>
+</p>
+
+<form method="post">
+    
+    <input type="hidden" name="idpersonaje" value="@Model.IdPersonaje"
+        class="form-control" />
+    <br />
+    <label>Nombre</label>
+    <input type="text" name="nombre" value="@Model.Nombre" 
+        class="form-control" />
+    <br />
+    <label>Imagen</label>
+    <input type="text" name="imagen" value="@Model.Imagen" 
+        class="form-control" />
+    <br />
+    <button class="btn btn-danger">Modificar</button>
+</form>
+

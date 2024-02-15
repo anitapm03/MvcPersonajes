@@ -1,0 +1,22 @@
+﻿@model Personaje
+
+<h1>Crear un personaje</h1>
+
+<p>
+    <a asp-controller="Personajes" asp-action="Index">
+        Volver
+    </a>
+</p>
+
+<form method="post">
+    <label>ID</label>
+    <input type="number" name="idpersonaje" class="form-control"/>
+    <br />
+    <label>Nombre</label>
+    <input type="text" name="nombre" class="form-control" />
+    <br />
+    <label>Imagen</label>
+    <input type="text" name="imagen" class="form-control" />
+    <br />
+    <button class="btn btn-danger">Crear</button>
+</form>
