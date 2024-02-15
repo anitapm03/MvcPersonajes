@@ -12,7 +12,7 @@ namespace MvcPersonajes.Repositories
 
         public RepositoryPersonajes()
         {
-            string connectionString = "Data Source=LOCALHOST\\SQLEXPRESS;Initial Catalog=HOSPITAL;Persist Security Info=True;User ID=SA;Password=MCSD2023";
+            string connectionString = "Data Source=DESKTOP-GDCKK71\\SQLEXPRESS;Initial Catalog=HOSPITAL;Persist Security Info=True;User ID=anita;Password=Cantalojas3;";
             this.cn = new SqlConnection(connectionString);
             this.com = new SqlCommand();
             this.com.Connection = this.cn;
